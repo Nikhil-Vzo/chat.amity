@@ -59,3 +59,16 @@ function escapeHtml(s){ return String(s)
 .replace(/>/g,'&gt;')
 .replace(/"/g,'&quot;')
 .replace(/'/g,'&#039;'); }
+
+
+// Prevent Enter from refreshing page anywhere
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && document.activeElement.tagName === 'INPUT') {
+    e.preventDefault();
+    // Optionally, trigger your send message if focus is on message input
+    if (document.activeElement === input) {
+      form.dispatchEvent(new Event('submit', {cancelable: true}));
+    }
+  }
+});
+
