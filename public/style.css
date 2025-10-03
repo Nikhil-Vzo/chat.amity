@@ -1,0 +1,28 @@
+:root{
+--bg: #0f172a;
+--card: #0b1220;
+--accent: linear-gradient(90deg,#7c3aed,#06b6d4);
+--muted: #9aa4bf;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+body{background:radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent), var(--bg); color:#e6eef8}
+.container{max-width:900px;margin:28px auto;padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+header{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+header h1{margin:0;font-size:20px}
+.chat{height:60vh;overflow:auto;padding:12px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
+.messages{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.messages li{padding:8px 10px;border-radius:8px;max-width:80%;word-wrap:break-word}
+.messages li.me{align-self:flex-end;background:linear-gradient(90deg,#0ea5a6,#7c3aed);color:#fff}
+.messages li.other{align-self:flex-start;background:rgba(255,255,255,0.03);color:var(--muted)}
+.messages li.system{align-self:center;background:transparent;color:#8b9ac6;font-size:13px}
+.composer{display:flex;gap:8px;margin-top:12px}
+.composer input#nick{width:200px;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.composer input#msg{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+.composer button{padding:10px 14px;border-radius:8px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+
+
+small{color:var(--muted)}
+
+
+@media (max-width:600px){.container{margin:12px;padding:12px}.composer input#nick{display:none}}

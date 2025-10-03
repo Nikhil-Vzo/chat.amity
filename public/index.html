@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Socket.IO Chat — Minimal</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="container">
+<header>
+<h1>✨ WhisperRoom</h1>
+<small>Enter your nickname and chat — anonymous-ish, human-ish.</small>
+</header>
+
+
+<section class="chat">
+<ul id="messages" class="messages"></ul>
+</section>
+
+
+<form id="msgForm" class="composer">
+<input id="nick" placeholder="Your nickname (optional)" maxlength="24" />
+<input id="msg" autocomplete="off" placeholder="Type a message and press Enter" />
+<button type="submit">Send</button>
+</form>
+</main>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/client.js"></script>
+</body>
+</html>
